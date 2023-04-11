@@ -40,7 +40,7 @@ dictConfig({
         "error_file": {
             "class": "logging.handlers.RotatingFileHandler",
             "formatter": "detailed",
-            "filename": "log/gunicorn.error.log",
+            "filename": "log/error.log",
             "maxBytes": 10000,
             "backupCount": 10,
             "delay": "True",
@@ -48,7 +48,7 @@ dictConfig({
         "detailed_file": {
             "class": "logging.handlers.RotatingFileHandler",
             "formatter": "detailed",
-            "filename": "log/gunicorn.detailed.log",
+            "filename": "log/detalhado.log",
             "maxBytes": 10000,
             "backupCount": 10,
             "delay": "True",
@@ -66,6 +66,4 @@ dictConfig({
         "level": "INFO",
     }
 })
-
-
 logger = logging.getLogger(__name__)
