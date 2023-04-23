@@ -1,5 +1,4 @@
-from schemas.comentario import ComentarioSchema
-from schemas.pessoa import PessoaSchema, PessoaBuscaSchema, PessoaViewSchema, \
-                            ListagemPessoaSchema, PessoaDelSchema, apresenta_pessoa, \
-                            apresenta_pessoa, apresenta_pessoas
+from schemas.carro import CarroSchema, CarroBuscaSchema, CarroViewSchema, CarroBuscaPlacaSchema, \
+                            ListagemCarrosSchema, CarroDelSchema, apresenta_carros, \
+                            apresenta_carro, apresenta_carros
 from schemas.error import ErrorSchema
