@@ -1,63 +1,43 @@
-[2023-04-11 00:44:18,612] ERROR log_exception() L1449 Exception on /pessoa [GET] - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py L1449
-Traceback (most recent call last):
-  File "C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1503, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_openapi3\scaffold.py", line 109, in wrapper
-    resp = _do_wrapper(
-  File "C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
-    response = func(**request_kwargs)
-  File "G:\Repositorios\MVP -- PUC\back-end\app.py", line 88, in get_pessoa
-    pessoa_id = query.id
-AttributeError: 'PessoaBuscaSchema' object has no attribute 'id'
-[2023-04-11 00:44:18,617] INFO _log() L224  192.168.0.44 - - [11/Apr/2023 00:44:18] "[35m[1mGET /pessoa?nome=Tiagos HTTP/1.1[0m" 500 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-11 00:44:40,418] ERROR log_exception() L1449 Exception on /pessoa [GET] - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py L1449
-Traceback (most recent call last):
-  File "C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1503, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_openapi3\scaffold.py", line 109, in wrapper
-    resp = _do_wrapper(
-  File "C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
-    response = func(**request_kwargs)
-  File "G:\Repositorios\MVP -- PUC\back-end\app.py", line 88, in get_pessoa
-    pessoa_id = query.id
-AttributeError: 'PessoaBuscaSchema' object has no attribute 'id'
-[2023-04-11 00:44:40,421] INFO _log() L224  192.168.0.44 - - [11/Apr/2023 00:44:40] "[35m[1mGET /pessoa?nome=Tiago HTTP/1.1[0m" 500 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-11 00:44:54,275] INFO _log() L224  192.168.0.44 - - [11/Apr/2023 00:44:54] "GET /pessoas HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:13,844] INFO _log() L224   * Running on all addresses (0.0.0.0)
-   WARNING: This is a development server. Do not use it in a production deployment.
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.0.44:5000 (Press CTRL+C to quit) - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:25,365] ERROR _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:25] code 400, message Bad request version ('úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÊÊ\x00\x00\x00') - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:25,385] ERROR _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:25] code 400, message Bad request version ('K\x83ß\x99æR¹6\x963]\x10z\x00\x12\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00') - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:27,841] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:27] "[32mGET / HTTP/1.1[0m" 302 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:27,851] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:27] "[32mGET /openapi HTTP/1.1[0m" 308 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:27,863] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:27] "GET /openapi/ HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:27,982] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:27] "GET /openapi/static/images/swagger.svg HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:27,992] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:27] "GET /openapi/static/images/redoc.svg HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:27,994] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:27] "GET /openapi/static/images/rapidoc.svg HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:28,046] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:28] "GET /openapi/ HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:28,063] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:28] "GET /openapi/static/images/apidoc.svg HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:29,822] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:29] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:29,852] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:29] "GET /openapi/static/css/swagger-ui.css HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:29,876] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:29] "GET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:29,878] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:29] "GET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:29,993] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:29] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:30,050] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:30] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:30,070] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:30] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
-[2023-04-23 17:34:40,288] INFO _log() L224  192.168.0.44 - - [23/Apr/2023 17:34:40] "POST /carro HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,690] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,700] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,710] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,721] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,730] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,741] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,750] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,761] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,771] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,781] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,791] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,801] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,837] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,847] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,858] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,868] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,878] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,888] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,897] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,908] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,918] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,928] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,938] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,949] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,958] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,968] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,978] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,989] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:16,999] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:16] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:17,009] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:17] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:17,019] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:17] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:17,029] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:17] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:17,040] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:17] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:17,050] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:17] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:17,476] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:17] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:17,499] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:17] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:17,517] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:17] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:17,527] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:17] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:17,536] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:17] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:17,546] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:17] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:17,556] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:17] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:17,567] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:17] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 20:50:17,576] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 20:50:17] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 

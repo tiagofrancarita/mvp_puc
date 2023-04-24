@@ -35,6 +35,6 @@ class Carro(Base):
         self.ano = ano
         self.quilometragem = quilometragem
 
-        # se não for informada, será o data exata da inserção no banco
+        # se não for informada a data, será o data exata da inserção no banco
         if data_insercao:
             self.data_insercao = data_insercao

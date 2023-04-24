@@ -1,9 +1,7 @@
 from flask_openapi3 import OpenAPI, Info, Tag
 from flask import redirect
 from urllib.parse import unquote
-
 from sqlalchemy.exc import IntegrityError
-
 from model import Session, Carro
 from logger import logger
 from schemas import *
@@ -127,7 +125,7 @@ def get_carroPlaca(query: CarroBuscaPlacaSchema):
         return {"mesage": error_msg}, 404
     else:
         logger.debug(f"Carro econtrado: '{carro.modelo}','{carro.marca}''{carro.placa}'")
-        # retorna a representação de produto
+        # retorna a representação de carro
         return apresenta_carro(carro), 200
     
 @app.delete('/carro', tags=[carro_tag],
@@ -150,7 +148,7 @@ def del_carro(query: CarroBuscaSchema):
         logger.debug(f"Deletado carro #{carro_id}")
         return {"mesage": "Carro removido", "id": carro_id}
     else:
-        # se o produto não foi encontrado
+        # se o carro não foi encontrado
         error_msg = "Carro não encontrado na base :/"
         logger.warning(f"Erro ao deletar carro #'{carro_id}', {error_msg}")
         return {"mesage": error_msg}, 404
