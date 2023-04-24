@@ -40,3 +40,4 @@
 [2023-04-23 21:43:30,570] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 21:43:30] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
 [2023-04-23 21:47:21,913] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 21:47:21] "OPTIONS /carro?id=12 HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
 [2023-04-23 21:47:22,267] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 21:47:22] "DELETE /carro?id=12 HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
+[2023-04-23 21:48:14,586] INFO _log() L224  127.0.0.1 - - [23/Apr/2023 21:48:14] "GET /carros HTTP/1.1" 200 - - call_trace=C:\Users\Tiago França\AppData\Local\Programs\Python\Python310\lib\site-packages\werkzeug\_internal.py L224 
