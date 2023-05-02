@@ -85,7 +85,7 @@ def get_carros():
 @app.get('/carro', tags=[carro_tag],
          responses={"200": CarroViewSchema, "404": ErrorSchema})
 def get_carro(query: CarroBuscaSchema):
-    """Faz a busca por um carro a partir do id do produto
+    """Faz a busca por um carro a partir de um determinado id.
        Retorna uma representação do carro.
     """
     carro_id = query.id
@@ -105,33 +105,11 @@ def get_carro(query: CarroBuscaSchema):
         # retorna a representação de carro
         return apresenta_carro(carro), 200
     
-@app.get('/carro', tags=[carro_tag],
-         responses={"200": CarroViewSchema, "404": ErrorSchema})
-def get_carroPlaca(query: CarroBuscaPlacaSchema):
-    """Faz a busca por um carro a partir da placa do carro
-       Retorna uma representação do carro.
-    """
-    carro_placa = query.placa
-    logger.debug(f"Coletando dados sobre carro #{carro_placa}")
-    # criando conexão com a base
-    session = Session()
-    # fazendo a busca
-    carro = session.query(Carro).filter(Carro.placa == carro_placa).first()
-
-    if not carro:
-        # se o carro não foi encontrado
-        error_msg = "Carro não encontrado na base :/"
-        logger.warning(f"Erro ao buscar o carro com a placa informada: '{carro_placa}', {error_msg}")
-        return {"mesage": error_msg}, 404
-    else:
-        logger.debug(f"Carro econtrado: '{carro.modelo}','{carro.marca}''{carro.placa}'")
-        # retorna a representação de carro
-        return apresenta_carro(carro), 200
     
 @app.delete('/carro', tags=[carro_tag],
             responses={"200": CarroDelSchema, "404": ErrorSchema})
 def del_carro(query: CarroBuscaSchema):
-    """Deleta um Carro a partir do id do carro
+    """Deleta um Carro a partir de um determinado id.
     Retorna uma mensagem de confirmação da remoção.
     """
     carro_id = query.id
